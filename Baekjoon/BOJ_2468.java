@@ -85,4 +85,4 @@ public class BOJ_2468 {
 			System.out.println(rslt);
 		}
 	}
-}
+} 
