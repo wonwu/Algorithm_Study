@@ -1,4 +1,4 @@
-// PG_음양 뒤집기
+// PG_음양 더하기
 // 삼항연산자
 
 class Solution {
