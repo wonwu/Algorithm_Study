@@ -27,7 +27,7 @@ class Solution {
             if(n % i == 0){
                 h = i; w = n / i;
                 if( (w + h)*2 -4 == brown ){
-                    answer = {w, h};
+                    answer = new int[] {w, h};
                     break;
                 } 
             }
