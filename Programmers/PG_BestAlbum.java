@@ -1,5 +1,3 @@
-package week1_Hash;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,7 +30,7 @@ import java.util.Map;
  * 5. 리스트 rslt를 배열 answer로 바꿔서 반환
  * 
  */
-public class BestAlbum {
+public class PG_BestAlbum {
 	
     public int[] solution(String[] genres, int[] plays) {
         int[] answer = {};
@@ -102,10 +100,10 @@ public class BestAlbum {
     }   
     
 	public static void main(String[] args) {	
-		    String[] genres = {"classic","pop","classic","classic","pop"};
+		String[] genres = {"classic","pop","classic","classic","pop"};
         int[] plays = {500,600,150,800,2500};
        
-        BestAlbum b = new BestAlbum();
+        PG_BestAlbum b = new PG_BestAlbum();
         
         System.out.println(Arrays.toString(b.solution(genres, plays)));
 	}
