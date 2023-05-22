@@ -1,20 +1,20 @@
+// substring 
+// Long.parseLong 제한사항 확인 필
+
 class Solution {
+     
     public int solution(String t, String p) {
         int answer = 0; //  작거나 같은 것이 나오는 횟수
+        int pLen = p.length();
+        int tLen = t.length(); 
+        long compareP = Long.parseLong(p);
         
-        int len = p.length();
-        char[] num = t.toCharArray();
-        
-        for(int i=0;i<=t.length()-len;i++){
-            int rslt = 0;
-            int idx = len-1;
-            for(int j=i;j<j+len;j++){
-                rslt += (num[i]-'0')*Math.pow(10,idx--);
-            }
-            if(Integer.parseInt(p) >= rslt){
+        for(int i=0;i<=tLen-pLen;i++){
+            // String to Long 
+            long rslt = Long.parseLong(t.substring(i,i+pLen));
+            if(compareP >= rslt){
                 answer++;
             }
-            
         }
         return answer;
     }
