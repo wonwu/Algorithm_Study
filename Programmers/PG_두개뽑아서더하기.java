@@ -1,24 +1,37 @@
 /*
+시도02 : HashSet 100.0/ 100.0
+- 중복 제거
+- 순서 보장x
+- null 저장o
+
+--------------------------
 시도01 : 55.6 / 100.0
 조합o : 중복 허용x (해시)
 오름차순 정렬
 
 *중복 제거 방법*
 - Set
---------------------------
-시도02 : 
-
 
 */
 import java.util.Arrays;
+import java.util.Set;
 import java.util.HashSet;
 
 class Solution {
     
-    public int[] solution(int[] numbers) {
-        int answer[];
+    public Integer[] solution(int[] numbers) {
+        Integer[] answer;
+        Set<Integer> set = new HashSet<>();
         
+        for(int i=0;i<numbers.length;i++){
+            for(int j=i+1;j<numbers.length;j++){
+                set.add(numbers[i]+numbers[j]);
+            }
+        }
         
+        // set to array(Integer), 자동으로 배열의 크기가 지정
+        answer = set.toArray(new Integer[0]);
+        Arrays.sort(answer);
         
         return answer;
         
